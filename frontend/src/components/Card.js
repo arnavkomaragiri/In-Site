@@ -3,7 +3,7 @@ import Chart from 'react-apexcharts';
 import { useState } from 'react';
 
 const Card = styled.div`
-    height: 350px;
+    height: 335px;
     width: 350px;
     border-radius: 1rem;
     background: #053868;
@@ -70,19 +70,22 @@ const SimpleCard = function(){
     const series = [20, 50, 30];
 
     return(
-        <Card>
-            <CardTitle>83% True</CardTitle>
-            {/* <CardContent></CardContent> */}
-            <ChartDiv>
-                <Chart options={options}
-                series={series}
-                type="pie"
-                width="100%"
-                height="auto"
-                >
-                </Chart>
-            </ChartDiv>
-        </Card>
+        <div>
+            <Card>
+                <CardTitle>83% True</CardTitle>
+                {/* <CardContent></CardContent> */}
+                <ChartDiv>
+                    <Chart options={options}
+                    series={series}
+                    type="pie"
+                    width="100%"
+                    height="auto"
+                    >
+                    </Chart>
+                </ChartDiv>
+            </Card>
+        </div>
+        
     );
 }
 
